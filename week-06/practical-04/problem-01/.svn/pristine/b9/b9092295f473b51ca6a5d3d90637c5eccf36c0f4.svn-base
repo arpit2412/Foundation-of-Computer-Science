@@ -1,0 +1,41 @@
+According to Hanoi Tower. We are taking three pillars for the disk. 
+One is source which will contain all the disk.
+One is destination in which we need to put the disk as it was in in initial stage in source.
+One is intermediate or middle pillar which will be act as an extra pillar which is useful for maintaining the order in destination.
+ 
+
+EXCESSIVE RECURSION CASE....
+
+Conditions:
+
+We can only move one disk at a time.
+We cannot place larger disk on smaller disk.
+
+Logic:
+
+
+If number of disk is zero the just return no need to do anything.
+If number of disk is one then just move the disk from source to destination.
+We will try to move all the disk from source to intermediate except the last one using destination.
+Then we will move last disk from the source to destination.
+Then we will move all the disk from intermediate to final using source as the middle one. 
+
+Lets take an example if the number of disks is 5.
+
+So now at first step we will try to move the first four disk from source(initial) to intermediate(final) using destination(as the middle).
+so now only one disk is left at the source and all the other 4 disk is at intermediate and to do so we call recursively
+
+move(disk-1, source, destination, middle)
+
+
+Now we can move the disk from source to destination directly.
+
+System.out.println(source + " to " + destination)
+
+
+Now all the disk is at intermediate and destination now we want to move the disk to destination(final) from middle(initial) using source(as the middle).
+
+move(disk-1, middle, source , destination)
+
+
+

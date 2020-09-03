@@ -1,0 +1,137 @@
+/*
+*
+* Foundations of Computer Science
+* Semester 02 Year 2019
+* id: a1784072 name: Arpit Garg
+*
+*/
+//import libraries to accept input from the user.
+import java.util.*;
+class SwitchRange{
+	public static void main(String[] args) {
+		Random ran = new Random();
+		System.out.println("Welcome to Even Odd Stairs !!!!");
+
+		//Creating variables 
+		int sum=0;
+		int avg = 0;
+
+		//Creating arrays to store 10 random integers.
+		int rn[] = new int[10];
+		//generating random numbers.
+		for(int i=0;i<10;i++){
+			//Random Number between 0 to 20
+			rn[i] = ran.nextInt(20);
+			sum +=rn[i];
+		} 
+
+		//Calculating average
+		avg = Math.round((float) sum/10);
+
+		
+		//generating random numbers.
+		for(int i=0;i<10;i++){
+			//Random Number between 0 to 20
+			rn[i] = ran.nextInt(20);
+
+			//Printing the labels according to the range and random numbers
+			System.out.print("Label (" + rn[i] + "):\t");
+			
+			//Switch case for random numbers..
+			switch(rn[i]){
+				//When random number is zero..
+				case 0: System.out.println();
+				break;
+				
+				//Range (0,5]
+				case 1:
+				case 2:
+				case 3:
+				case 4:
+				case 5: for (int j=0;j<rn[i];j++){
+					System.out.print("o");
+				}
+				System.out.println();
+				break;
+
+				//Range (5,10]
+				case 6:
+				case 7:
+				case 8:
+				case 9:
+				case 10: for (int j=0;j<rn[i];j++){
+					System.out.print("x");
+				}
+				System.out.println();
+				break;
+
+				//Range (10,15]
+				case 11:
+				case 12:
+				case 13:
+				case 14:
+				case 15: for (int j=0;j<rn[i];j++){
+					System.out.print("s");
+				}
+				System.out.println();
+				break;
+
+				//Range higher than 15
+				default: for (int j=0;j<rn[i];j++){
+					System.out.print("*");
+				}
+				System.out.println();
+				break;
+			}
+
+			
+		} 
+
+
+		//Average Block..
+			System.out.print("Average (" + avg + "):\t");
+		//Switch case for average..
+			switch((int)avg){
+
+				//Range (0,5]
+				case 1:
+				case 2:
+				case 3:
+				case 4:
+				case 5: for (int j=0;j<avg;j++){
+					System.out.print("o");
+				}
+				System.out.println();
+				break;
+
+				//Range (5,10]
+				case 6:
+				case 7:
+				case 8:
+				case 9:
+				case 10: for (int j=0;j<avg;j++){
+					System.out.print("x");
+				}
+				System.out.println();
+				break;
+
+				//Range (10,15]
+				case 11:
+				case 12:
+				case 13:
+				case 14:
+				case 15: for (int j=0;j<avg;j++){
+					System.out.print("s");
+				}
+				System.out.println();
+				break;
+
+				//Range higher than 15
+				default: for (int j=0;j<avg;j++){
+					System.out.print("*");
+				}
+				System.out.println();
+				break;
+			}
+	}		
+}

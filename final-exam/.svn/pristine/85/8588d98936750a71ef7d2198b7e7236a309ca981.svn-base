@@ -1,0 +1,40 @@
+import java.lang.*;
+import java.util.*;
+class DataStructure implements Structurable{
+	public int [] sort(int [] array){
+		if(array.length==0){
+			System.out.println("No elements.");
+			throw new UnsupportedOperationException();
+		}else{
+			int n = array.length;
+			for(int i=0;i<n;i++){
+				for(int j=0;j<n-i-1;j++){
+					if(array[j+1]>array[j]){
+						int temp = array[j];
+						array[j+1] = array[j];
+						array[j] = temp;
+					}
+				}
+			}
+		}
+		return array;
+	}
+    public int search(String [] array, String value){
+    	int n = array.length;
+    	int ret = 0;
+    	if(n==0){
+    		System.out.println("No elements.");
+			throw new UnsupportedOperationException();
+    	}else{
+    		for(int i=0;i<n;i++){
+    			if(array[i].equals(value)){
+    				ret = i;
+    			}else{
+    				ret = -99;
+    			}
+    		}
+    	}
+    	return ret;
+    }
+	
+}

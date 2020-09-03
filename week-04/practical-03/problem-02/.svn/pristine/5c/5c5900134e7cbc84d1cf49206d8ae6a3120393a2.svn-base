@@ -1,0 +1,21 @@
+class Circle extends Shape{
+	private double area;
+
+	Circle(){
+		super();
+	}
+
+	circle(double radius){
+		super(radius);
+	}
+
+	public void setArea(){
+		area = super.getRadius() * 3.14159 * super.getRadius();
+	}
+
+	public double getArea(){
+		return area;
+	}
+
+	
+}

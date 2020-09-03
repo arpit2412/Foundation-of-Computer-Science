@@ -1,0 +1,20 @@
+import java.util.*;
+class Test{
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		System.out.println("Do you want to enter the number of disks: (Y/N) ");
+		String option = input.nextLine();
+		if(option.equalsIgnoreCase("Y")){
+			System.out.println("Enter the number of disks: ");
+			int nDisk = input.nextInt();
+			HanoiTower h = new HanoiTower(nDisk);
+			//h.solve();
+		}else if(option.equalsIgnoreCase("N")){
+			HanoiTower h = new HanoiTower();
+			//h.solve();
+		}else{
+			System.out.println("You have entered the wrong choice!!!!!");
+		}
+	}
+	
+}

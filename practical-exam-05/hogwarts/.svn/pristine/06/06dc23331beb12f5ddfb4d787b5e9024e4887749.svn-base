@@ -1,0 +1,47 @@
+/*==================================
+Foundations of Computer Science
+Student: Arpit Garg
+id: A1784072
+Semester: 2
+Year: 2019    
+Practical Exam Number: 5
+===================================*/
+
+class Queue{
+	private Node back;
+	private Node front;
+
+	//Entering
+	public void enqueue(Student tmpStudent){
+		Node st = new Node(tmpStudent);
+		try{
+			if(this.back==null){
+				this.front = this.back = new Node(tmpStudent);
+				return;
+			}else{
+				this.back.setNext(st);
+				this.back = st;	
+			}
+		}catch(Exception e){
+			System.out.println(e);
+		}
+	} 
+	//Removing 
+	public void dequeue(){
+		if(this.front == null){
+			System.out.println("Sorry! No element present");
+		}else{
+			this.front.getNext();
+		}
+
+	}
+	//Displaying
+	public void displayQueue(){
+		int counter = 1;
+		Student s = front.getInfo();
+		while(this.front.getNext() != null){
+			System.out.println("#" + counter + " " + s.getName() + "," + s.getAge() +" years old, " +s.getPeriod() + " year in Hogwarts" );
+			counter++;
+		}
+	}
+}

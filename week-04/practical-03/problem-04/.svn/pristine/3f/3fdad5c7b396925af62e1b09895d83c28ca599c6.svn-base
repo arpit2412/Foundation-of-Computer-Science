@@ -1,0 +1,3 @@
+class RoadBike extends Bicycle{
+	String tyres;	
+}

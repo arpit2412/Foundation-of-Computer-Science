@@ -1,0 +1,65 @@
+import java.util.*;
+class BaseOperations{
+	public static void main(String[] args) {
+		int [] arrInt = new int[20];
+		String arrString[] = new String[20];
+		float arrFloat[] = new float[20];
+		int revarr [] = new int [20];
+		float revf [] = new float[20]; 
+		String revString[] = new String[20];
+
+		int n;
+
+		Scanner input = new Scanner(System.in);
+		printArray p = new printArray();
+		reverseArray r = new reverseArray();
+
+		System.out.println("Hello Dear User !!!!");
+		System.out.println();
+		System.out.println("What you want to enter \n a.) Integer \n b.) String \n c.) Float\n");
+		char a = input.next().charAt(0);
+		if(a=='a'){
+			System.out.println("Enter the number of inputs you want to add: ");
+			n = input.nextInt();
+			System.out.println("Enter integer!!");
+			for(int i=0;i<n;i++){
+				arrInt[i] = input.nextInt();
+			}
+			System.out.println("Order");
+			p.printArray(arrInt,n);
+			revarr = r.reverseArray(arrInt,n);
+			System.out.println();	
+			System.out.println("Reverse Order");
+			p.printArray(revarr,n);
+		}else if (a =='b'){
+			System.out.println("Enter the number of inputs you want to add: ");
+			n = input.nextInt();
+			input.nextLine();
+			System.out.println("Enter Strings!!");
+			for(int i=0;i<n;i++){
+				arrString[i] = input.nextLine();
+			}
+			System.out.println("Order");
+			p.printArray(arrString,n);
+			revString = r.reverseArray(arrString,n);
+			System.out.println();
+			System.out.println("Reverse Order");
+			p.printArray(revString,n);
+
+		}else if (a == 'c'){
+			System.out.println("Enter the number of inputs you want to add: ");
+			n = input.nextInt();
+			input.nextLine();
+			System.out.println("Enter Floats!!");
+			for(int i=0;i<n;i++){
+				arrFloat[i] = input.nextFloat();
+			}
+			System.out.println("Order");
+			p.printArray(arrFloat,n);
+			revf = r.reverseArray(arrFloat,n);
+			System.out.println();
+			System.out.println("Reverse Order");
+			p.printArray(revf,n);
+		}	
+	}
+}

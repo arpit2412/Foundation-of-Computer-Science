@@ -1,0 +1,12 @@
+import java.util.*;
+class Main{
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		Player human = new Human();
+		System.out.println("Human's Chance: ");
+		System.out.println("Enter your choice: \nRock \nPaper \nScissor");
+		String choice = input.nextLine();
+		Referee ref = new Referee();
+		ref.valid(choice);
+	}
+}

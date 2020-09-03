@@ -1,0 +1,57 @@
+/*
+*
+* Foundations of Computer Science
+* Semester 02 Year 2019
+* id: a1784072 name: Arpit Garg
+*
+*/
+//import libraries to accept input from the user.
+import java.util.*;
+class BigTen{
+	public static void main(String[] args) {
+		//Exception Handling
+		try{
+			Random ran = new Random();
+			System.out.println("Welcome to Even Odd Stairs !!!!");
+
+			//Creating arrays to store 10 random integers.
+			int rn[] = new int[10];
+
+			//Creating variables 
+			int sum=0;
+			float avg = 0.0f;
+			//generating random numbers.
+			for(int i=0;i<10;i++){
+				//Random Number between 0 to 20
+				rn[i] = ran.nextInt(20);
+				sum +=rn[i];
+			} 
+
+			//Calculating average
+			avg = (float) sum/10;
+
+			//Bigger Smaller than 10 Stairs formation with displaying of the output.
+			System.out.println("\tThe Even Odd Stairs are : ");
+			for(int i=0;i<10;i++){
+				System.out.print("Number (" + rn[i] + "):\t");
+				if(rn[i]>=10){
+					for (int j=1;j<=rn[i];j++){
+						System.out.print(">=");
+					}
+				}else{
+					for (int j=1;j<=rn[i];j++){
+						System.out.print("<");
+					}
+				}
+				System.out.println();
+			}
+			System.out.printf("Average (%d):\t", Math.round(avg));
+			for (int j=0; j<Math.round(avg);j++){
+				System.out.print("*");
+			} 
+			System.out.println();
+		}catch(Exception e){
+			System.out.println(e);					//Printing exception if occurs
+		}	
+	}	
+}

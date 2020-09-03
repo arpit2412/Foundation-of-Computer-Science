@@ -1,0 +1,3 @@
+class Hibrid extends Bicycle{
+	String suspension;	
+}

@@ -1,0 +1,16 @@
+/*
+*
+* Foundations of Computer Science
+* Semester 02 Year 2019
+* id: a1784072 name: Arpit Garg
+*
+*/
+class Patient extends Person{
+	private String diagnostic ,inTime , prevTime;
+
+	void setAttri(diagnostic, inTime, prevTime){
+		this.diagnostic = diagnostic;
+		this.inTime = inTime;
+		this.prevTime = prevTime;
+	}
+}

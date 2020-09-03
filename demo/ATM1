@@ -1,0 +1,77 @@
+import java.io.*;
+class ATM{
+	public static String run(int cash) {
+		System.out.printf("The amount of cash: %d\n", cash);
+		int twentyNote=0, fiftyNote =0, remainAmount;
+		
+			if(cash>=100){
+			fiftyNote = ((cash*2)/100);
+			}
+			remainAmount = cash % 100;
+
+
+			if((remainAmount % 50 ==20) || (remainAmount % 50 ==40)){
+				if(remainAmount % 50 ==20){
+					twentyNote++;
+				}else if (remainAmount % 50 ==40){
+					twentyNote += 2;
+				}else if((remainAmount % 50 == 10) || (remainAmount % 50 == 30)){
+				while(remainAmount>10){
+					twentyNote++;
+					remainAmount -= 20;
+				}
+				if(remainAmount<10 && remainAmount>0){
+					System.out.println("Sorry, the value you input cannot be withdrew");
+				}
+			}
+				//remainAmount = remainAmount%50;
+			}else if((remainAmount % 50 == 10) || (remainAmount % 50 == 30)){
+				while(remainAmount>10){
+					twentyNote++;
+					remainAmount -= 20;
+				}
+				if(remainAmount<10 && remainAmount>0){
+					System.out.println("Sorry, the value you input cannot be withdrew");
+				}
+			}else if(remainAmount<10 && remainAmount != 0){
+				System.out.println("Sorry, the value you input cannot be withdrew");
+			} 
+
+		// }else if (cash<100){
+		// 	while(cash!=0){
+		// 	if ((cash % 50) == 0 || (cash%20) == 0 || (cash == 70) || (cash == 90)){
+		// 		if ((cash % 50) == 0){
+		// 			fiftyNote++;
+		// 			cash -=50;
+		// 		}else if ((cash%20) == 0){
+		// 			twentyNote++;
+		// 			cash -=20;
+		// 		}
+		// 	}else{
+		// 		System.out.println("Sorry, the value you input cannot be withdrew");
+		// 		break;
+		// 	}
+		// }
+			
+		// }
+		
+
+
+
+
+
+
+
+		
+		String ret = "Here is "+ twentyNote + " $20 notes and " + fiftyNote +" $50 notes.";
+		return ret;
+	}
+	public static void main(String[] args) {
+		int cash;
+		InputStreamReader input = new InputStreamReader(System.in);
+		System.out.println("Enter the amount of cash");
+		cash = Integer.parseInt(System.console().readLine());
+		String countNotes = run(cash);
+		System.out.println(countNotes);		
+	}
+}

@@ -1,0 +1,44 @@
+class printArray{
+	void printArray(int [] array, int n){
+		System.out.println("Order");
+		System.out.print(" [ ");
+		for(int i=0;i<n;i++){
+			System.out.print(array[i]);
+			if(i!=n-1){
+				System.out.print(" , ");
+			}
+		}
+		System.out.println(" ] ");
+	}
+
+	void printArray(String [] array, int n){
+		
+		System.out.println("Order");
+
+		System.out.print(" [ ");
+
+		String rev[] = new String[20];
+
+		for(int i=0;i<n;i++){
+			System.out.print(array[i]);
+			if(i!=n-1){
+				System.out.print(" , ");
+			}	
+		}
+		System.out.println(" ] ");
+	}
+
+	void printArray(float [] array, int n){
+		
+		System.out.println("Reverse Order");
+		System.out.print(" [ ");
+
+		for(int i=0;i<n;i++){
+			System.out.print(array[i]);
+			if(i!=n-1){
+				System.out.print(" , ");
+			}	
+		}
+		System.out.println(" ] ");
+	}	
+}

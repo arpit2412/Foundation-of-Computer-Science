@@ -1,0 +1,24 @@
+//==================================
+// Foundations of Computer Science
+// Student: Arpit Garg	
+// id: A1784072		
+// Semester: Semester 2
+// Year: 2019
+// Practical Exam Number: 01
+//==================================
+
+
+//class name Problem
+class Problem{
+	//Main function: Execution starts from here
+	public static void main(String[] args) {
+		//Exception handling
+		try{
+			//Printing the line Hello World!
+			System.out.println("Hello World!");
+		}catch(Exception e){
+			System.out.println(e);   //Printing exception if occurs
+		}
+	}
+	
+}

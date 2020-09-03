@@ -1,0 +1,68 @@
+/*
+*
+* Foundations of Computer Science
+* Semester 02 Year 2019
+* id: a1784072 
+* name: Arpit Garg
+*
+*/
+class HanoiTower{
+	private int nDisk;
+	private char source = 'A';
+	private char middle = 'B';
+	private char destination = 'C'; 
+
+	//Constructor
+	HanoiTower(){
+		this.setDisk(3);		//Setting number of disk to 3
+	}
+
+	//Parameterised constructor
+	HanoiTower(int dTmp){
+		this.setDisk(dTmp);			//setting number of disk to user input
+	}
+
+	//if someone wants to change the nname of the pole 
+	public void  setName(char a, char b, char c){
+		this.source = a;
+		this.middle = b;
+		this.destination = c;
+	}
+
+	//Accessors
+	public char getSource(){
+		return this.source;
+	}
+	public char getMiddle(){
+		return this.middle;
+	}
+	public char getDestination(){
+		return this.destination;
+	}
+	public int getDisk(){
+	 	return nDisk;
+	}
+
+	//Mutators
+	public void setDisk(int nDisk){
+		this.nDisk = nDisk;
+	}
+
+	//method solve
+	public void solve(){
+		if(nDisk == 0){
+			System.out.println("Zero Disk not possible!!");				//if disk is zero no movement
+		}	
+		move(nDisk, source, middle, destination);
+	}
+	
+	//method move
+	public void move(int disk, char source, char middle, char destination){
+		if(disk == 0){
+			return;
+		}
+		move(disk-1, source, destination, middle); 						//Recursion 
+	    System.out.println(source + " to " + destination); 
+	    move(disk-1, middle, source, destination);	        
+	}
+}

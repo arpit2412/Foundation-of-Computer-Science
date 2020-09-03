@@ -1,0 +1,40 @@
+/*
+*
+* Foundations of Computer Science
+* Semester 02 Year 2019
+* id: a1784072 name: Arpit Garg
+*
+*/
+//import libraries to accept input from the user.
+import java.util.*;
+class findBig{
+	public static void main(String[] args) {
+		
+		//Creating variables
+		int a ,b ;
+
+		//Scanner input
+		Scanner input = new Scanner(System.in);
+		
+		//Handling Exceptions
+		try{
+
+			System.out.println("Enter a first number: ");  							//Taking input from the user
+			a = input.nextInt();
+			System.out.println("Enter a second number: ");
+			b = input.nextInt();
+
+			//Identifying bigger number
+			if(a>b){
+				System.out.printf("%d is bigger than %d \n", a, b);
+			}else{
+				System.out.printf("%d is bigger than %d \n", b, a);
+			}	
+		}catch(InputMismatchException e){												//If user input String instead of number
+			System.err.println("\nEntered value not an integer\n");
+			e.printStackTrace();
+		}catch(Exception e){															//Catching other exceptions
+			System.out.println("Exception: "+ e);
+		}
+	}	
+}

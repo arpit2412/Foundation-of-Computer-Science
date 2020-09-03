@@ -1,0 +1,4 @@
+interface Vehicle{
+	int changeGear();
+	void checkBrakes();
+}

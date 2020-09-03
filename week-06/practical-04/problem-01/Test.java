@@ -1,0 +1,35 @@
+/*
+*
+* Foundations of Computer Science
+* Semester 02 Year 2019
+* id: a1784072 
+* name: Arpit Garg
+*
+*/
+//library for user input 
+import java.util.*;
+class Test{
+	public static void main(String[] args) {
+		
+		//Exception Handling 
+		try{
+			Scanner input = new Scanner(System.in);		//user input 
+			System.out.println("Do you want to enter the number of disks: (Y/N) ");	 //Want to enter number of disk otherwise 2 
+			String option = input.nextLine();	
+			if(option.equalsIgnoreCase("Y")){
+				System.out.println("Enter the number of disks: ");			//Enter the number of disks
+				int nDisk = input.nextInt();
+				HanoiTower h = new HanoiTower(nDisk);						//Parameterised constructor
+				h.solve();
+			}else if(option.equalsIgnoreCase("N")){
+				HanoiTower h = new HanoiTower();							//Default constructor 
+				h.solve();
+			}else{
+				System.out.println("You have entered the wrong choice!!!!!");				
+			}
+		}catch(Exception e){
+			System.out.println("Exception: " + e);								//Exception handling 
+		}
+	}
+	
+}

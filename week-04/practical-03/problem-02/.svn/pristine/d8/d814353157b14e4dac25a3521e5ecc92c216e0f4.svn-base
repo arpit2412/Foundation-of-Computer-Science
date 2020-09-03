@@ -1,0 +1,68 @@
+/*
+*
+* Foundations of Computer Science
+* Semester 02 Year 2019
+* id: a1784072 name: Arpit Garg
+*
+*/
+public class Person{
+	private String givenName;
+	private String lastName;
+	private int age;
+	private String gender;
+	private String citizenship;
+
+	//Basic Constructor 
+	Person(){
+		this.givenName = "Unknown";
+		this.lastName = "Unknown";
+		this.age = 0;
+		this.gender = "Unknown";
+		this.citizenship = "Unknown";
+	}
+
+	//Parameterised COnstructor
+	Person(String givenName, String lastName, int age, String gender, String citizenship){
+		setgivenName(givenName);
+		setlastName(lastName);
+		setAge(age);
+		setGender(gender);
+		setCitizenship(citizenship);
+	}
+
+	//Mutators
+
+	void setgivenName(String name){
+		this.givenName = name;
+	}
+	void setlastName(String lname){
+		this.lastName = lname;
+	}
+	void setAge(int age){
+		this.age = age;
+	}
+	void setGender(String gen){
+		this.gender = gen;
+	}
+	void setCitizenship(String citizen){
+		this.citizenship = citizen;
+	}
+
+	//Accessors
+	public String getgivenName(){
+		return this.givenName;
+	}
+	public String getlastName(){
+		return this.lastName;
+	}
+	public int getAge(){
+		return this.age;
+	}
+	public String getGender(){
+		return this.gender;
+	}
+	public String getCitizenship(){
+		return this.citizenship;
+	}
+	
+}

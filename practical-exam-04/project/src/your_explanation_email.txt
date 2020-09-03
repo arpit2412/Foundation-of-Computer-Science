@@ -1,0 +1,7 @@
+Dear manager, 
+
+The problem (1), was due to ufnction not implemented , I fixed doing Selection sort and writing code for Selection sort strings;  
+The problem (2), was due to use if Binary Search because Binary Search require the elements to be in particular order so we need to sort first, I fixed doing it by Linear Search because it do not require sorting.; 
+The problem (3), was due to having large amount of data as Insertion sort require to take key element and shift to forward and require so much processing so not much efficient , I fixed doing Selection sort as in this only first element is treated as small then sorting is performed considering the min element.
+
+Kind regards, <Arpit Garg> <A1784072>

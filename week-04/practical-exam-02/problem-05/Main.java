@@ -1,0 +1,45 @@
+//==================================
+// Foundations of Computer Science
+// Student: Arpit Garg
+// id: A1784072
+// Semester: 02
+// Year: 2019
+// Practical Exam Number: 02
+//===================================
+
+//Class Main
+import java.util.*;
+class Main{
+	public static void main(String[] args) {
+		int count =0,flag =1;
+		Scanner input = new Scanner (System.in);
+			while(flag == 1){
+			System.out.println("Press 1. On street Parking \n2.Off street Parking");		//On street
+			int a = input.nextInt();
+			if(a == 2){
+				ParkingPlace pp = new ParkingPlace("AG","Aus","Off Street", "Car/Moto");	//off street 
+				pp.setPrice(15);
+				System.out.println("Details:" + pp.getOwner() + "\n" + pp.getAddress() + "\n" + pp.getType() + "\n" + pp.getVehicleType() + "\n" + pp.getPrice());
+			}else if (a == 1){
+				System.out.println("Enter the vehicle type: 1. car 2. Moto");
+				int typo = input.nextInt();
+				if(typo == 1){
+					ParkingPlace p1 = new ParkingPlace("AG","Aus","Off Street", "Car");				//parameterised constructor
+					if(count%2 == 0){
+						p1.setPrice(0);
+					}else{
+						p1.setPrice(10);
+					}
+					System.out.println("Details:" + p1.getOwner() + "\n" + p1.getAddress() + "\n" + p1.getType() + "\n" + p1.getVehicleType() + "\n" + p1.getPrice());
+				}
+				else if(typo == 2){
+					ParkingPlace p2 = new ParkingPlace("AG","Aus","Off Street", "Moto");
+					p2.setPrice(0);
+					System.out.println("Details:" + p2.getOwner() + "\n" + p2.getAddress() + "\n" + p2.getType() + "\n" + p2.getVehicleType() + "\n" + p2.getPrice());
+				}
+			}
+			System.out.println("Do you wish to continue: 1. yes 2. no");
+				flag = input.nextInt();
+		}
+	}
+}

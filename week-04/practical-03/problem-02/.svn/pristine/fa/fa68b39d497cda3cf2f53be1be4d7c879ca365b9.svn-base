@@ -1,0 +1,20 @@
+class Turtle extends Animal {
+	private String sound;
+	Turtle(){
+		super();
+	}
+	Turtle(String name, double weight, String favouriteFood, int age,String sound){
+		super(name,weight,favouriteFood,age);
+		setSound(sound);
+	}
+
+	public void setSound(String sound){
+		this.sound = sound;
+	}
+
+	public String makeSound(){
+		return this.sound;
+	}
+
+	
+}

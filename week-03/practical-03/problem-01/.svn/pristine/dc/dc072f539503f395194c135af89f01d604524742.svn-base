@@ -1,0 +1,22 @@
+class printArray{
+	void printArray(int [] array, int n){
+		System.out.println("Output: ");
+		for(int i=0;i<n;i++){
+			System.out.println("\n" + array[i]);
+		}
+	}
+	void printArray(String [] array, int n){
+		System.out.println("Output: ");
+		for(int i=0;i<n;i++){
+			System.out.println("\n" + array[i]);
+		}
+	}
+	void printArray(float [] array, int n){
+		System.out.println("Output: ");
+		for(int i=0;i<n;i++){
+			System.out.println("\n" + array[i]);
+		}
+
+	}
+	
+}

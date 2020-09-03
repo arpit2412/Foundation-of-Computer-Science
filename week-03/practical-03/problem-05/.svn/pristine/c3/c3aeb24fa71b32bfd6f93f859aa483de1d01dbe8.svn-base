@@ -1,0 +1,41 @@
+import java.util.*;
+class detA{
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		String a;
+		String ba = "2X2";
+		String d = "3X3";
+		int b,bt;
+		calcDet c = new calcDet();
+		int two[][] = new int[2][2];
+		int three[][] = new int[3][3];
+		System.out.println("Enetr size of matrix 2X2 or 3X3 ");
+		a = input.nextLine();
+		System.out.println("Enter the elements of the array !! ");
+		
+		if(a.equalsIgnoreCase(ba)){
+			for(int i =0;i<2;i++){
+				for(int j=0;j<2;j++){
+					System.out.printf("New Matrix[%d][%d]: \t",i,j  );
+					two[i][j] = input.nextInt();
+				}
+			}
+			b = c.calcDet(two,2);
+			System.out.println("The determinant is: " + b);
+		}else if (a.equalsIgnoreCase(d)){
+			for(int i =0;i<3;i++){
+				for(int j=0;j<3;j++){
+					System.out.printf("New Matrix[%d][%d]: \t",i,j  );
+					three[i][j] = input.nextInt();
+				}
+			}
+			for(int i=0;i<3;i++){
+				for(int j=0;j<3;j++){
+					System.out.println(three[i][j]);
+				}
+			}
+			bt = c.calcDet(three,3);
+			System.out.println("The determinant is: " + bt);
+		}
+	}
+}

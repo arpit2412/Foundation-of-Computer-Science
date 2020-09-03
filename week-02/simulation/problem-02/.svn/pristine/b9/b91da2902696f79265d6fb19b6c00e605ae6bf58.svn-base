@@ -1,0 +1,23 @@
+//==================================
+// Foundations of Computer Science
+// Student: Arpit Garg	
+// id: A1784072			
+// Semester: Semester 2	
+// Year: 2019	
+// Practical Exam Number: 01
+//===================================
+
+import java.util.*;
+class Problem{
+	public static void main(String[] args) {
+		
+		Scanner input = new Scanner(System.in);
+
+		int number_a=2, number_b=3, number_c;
+
+		
+		number_c = number_a * number_b;
+		System.out.printf("The multiplication of %d and %d is %d \n",number_a,number_b,number_c);
+	}
+	
+}

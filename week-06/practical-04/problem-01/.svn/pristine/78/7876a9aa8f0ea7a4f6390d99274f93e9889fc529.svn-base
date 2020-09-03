@@ -1,0 +1,61 @@
+class HanoiTower{
+	private int nDisk;
+	private char source = 'a';
+	private char middle = 'b';
+	private char destination = 'c'; 
+
+	HanoiTower(){
+		this.setDisk(3);
+		solve(3,this.source,this.middle,this.destination);
+
+	}
+
+	HanoiTower(int dTmp){
+		this.setDisk(dTmp);
+		solve(nDisk,this.source,this.middle,this.destination);
+
+
+	}
+
+	public void  setName(char a, char b, char c){
+		this.source = a;
+		this.middle = b;
+		this.destination = c;
+	}
+
+	public char getSource(){
+		return this.source;
+	}
+	public char getMiddle(){
+		return this.middle;
+	}
+	public char getDestination(){
+		return this.destination;
+	}
+
+	public int getDisk(){
+	 	return nDisk;
+	 }
+
+	public void setDisk(int nDisk){
+		this.nDisk = nDisk;
+	}
+	
+	// public void solve(){
+		
+		
+	// 		movement(this.nDisk,this.source,this.middle,this.middle);
+		
+	// }
+
+	public void solve(int nDisk, int source, int middle, int destination){
+		if(nDisk == 1){
+			System.out.println("Only 1 disk is present!!");
+			System.out.println("Move disk from " +  this.source + " to rod " + this.destination);
+		}else{
+			solve(nDisk-1, this.source, this.middle, this.destination); 
+	        System.out.println("Move disk " + nDisk + " from rod " +  this.source + " to rod " + this.destination); 
+	        solve(nDisk-1, this.middle, this.destination, this.source);
+	        } 
+	}
+}

@@ -1,0 +1,11 @@
+class Doctor extends Person{
+	private String speciality;
+
+	void setSpeciality(String spec){
+		this.speciality = spec;
+	}
+	String getSpeciality(){
+		return this.speciality;
+	}
+	
+}

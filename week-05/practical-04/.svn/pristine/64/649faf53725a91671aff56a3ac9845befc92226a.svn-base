@@ -1,0 +1,7 @@
+class Player{
+	private String input;
+	public String performMove(String input){
+		this.input = input;
+		return this.input;
+	}
+}

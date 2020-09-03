@@ -1,0 +1,37 @@
+//problem-01/BasicProgram.java
+/*Name: Arpit Garg
+Semester : 2
+Id: A1784072 
+FCS Final Practical*/
+import java.lang.*;
+
+public class BasicProgram{    
+    public int sum(int a, int b){
+    	return a+b;							//returning sum
+    }
+    public double div(int a, int b){
+    	if(b!=0){							//checking is sum is zero or not
+    		double c = (double)a/b;
+    		return c;						//returning division
+    	}else{
+    		System.out.println("Not possible division by zero");		//divisor cannot be zero
+    		throw new UnsupportedOperationException();					//throwing exception
+    	}
+    }
+    public void displayArray(int []array){							
+    	if(array.length==0){
+    		System.out.println("No elements");
+    		throw new UnsupportedOperationException();	//throwing exception
+    	}else{
+    		System.out.print("[");
+    		for(int i=0;i<array.length;i++){				//printing array
+    			if(i!=array.length-1){
+    				System.out.print(array[i]+",");
+    			}else{
+    				System.out.print(array[i]);
+    			}
+    		}
+    		System.out.println("];");
+    	}
+    }
+}

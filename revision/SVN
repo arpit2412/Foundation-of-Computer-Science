@@ -1,0 +1,30 @@
+https://version-control.adelaide.edu.au/svn/a1784072/2019/s2/fcs/
+
+
+
+Add
+svn add new_folder
+svn commit -m "Add New folder to the project"
+
+If you are not in a working copy, create it with svn checkout, copy new_folder there and do the above steps.
+
+OR
+
+Try svn import, see here; the following will create a new folder and upload files to the repository:
+
+svn import -m "Import new folder to the project" new_folder \
+        http://SVN_REPO/repos/trunk/new_folder
+
+
+
+
+
+
+WebSubmission
+
+https://cs.adelaide.edu.au/services/websubmission/
+
+
+Practical-01
+
+https://version-control.adelaide.edu.au/svn/a1784072/2019/s2/fcs/week-01/practical-01?p=79

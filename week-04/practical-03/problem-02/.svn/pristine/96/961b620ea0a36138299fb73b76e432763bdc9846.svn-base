@@ -1,0 +1,31 @@
+class PhysicalBook extends Book{
+	private int shelf;
+	private int aisle;
+	private int floor;
+
+	PhysicalBook(){
+		super();
+	}
+
+	PhysicalBook(String title, int year, String publish, int pages, int shelf,int aisle, int floor){
+		super(title,year,publish,pages);
+		setFunctions(shelf,aisle,floor);
+	}
+	public void setFunctions(int shelf, int aisle, int floor){
+		this.shelf = shelf;
+		this.aisle = aisle;
+		this.floor = floor;
+	}
+
+	public int getShelf(){
+		return this.shelf;
+	}
+	
+	public int getAisle(){
+		return this.aisle;
+	}
+
+	public int getFloor(){
+		return this.floor;
+	}
+}

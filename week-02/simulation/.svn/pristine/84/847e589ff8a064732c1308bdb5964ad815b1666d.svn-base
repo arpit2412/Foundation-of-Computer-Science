@@ -1,0 +1,26 @@
+//==================================
+// Foundations of Computer Science
+// Student: you name
+// id: your id
+// Semester:
+// Year:
+// Practical Exam Number:
+//===================================
+
+import java.util.*;
+class assignment{
+	public static void main(String[] args) {
+		
+		Scanner input = new Scanner(System.in);
+
+		float number_a=0.0f, number_b=0.0f, number_c=0.0f;
+
+		System.out.println("Enter the value of First number: ");
+		number_a = input.nextFloat();
+		System.out.println("Enter the value of Second number: ");
+		number_b = input.nextFloat();
+		number_c = number_a * number_b;
+		System.out.printf("Multiplication of %f and %f is %f \n",number_a,number_b,number_c);
+	}
+	
+}

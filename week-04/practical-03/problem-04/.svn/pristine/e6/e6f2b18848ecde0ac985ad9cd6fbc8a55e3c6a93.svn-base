@@ -1,0 +1,4 @@
+class MountainBike extends Bicycle{
+	String suspension; 
+	String forks; 
+}

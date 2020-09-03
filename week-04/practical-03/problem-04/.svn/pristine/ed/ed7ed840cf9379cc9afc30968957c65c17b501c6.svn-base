@@ -1,0 +1,6 @@
+class ElectricBike extends Bicycle{
+	float battery;
+	public void chargeBike(){
+
+	}
+}

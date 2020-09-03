@@ -1,0 +1,56 @@
+import java.util.*;
+import java.io.*;
+class Main{
+	public static void main(String[] args) throws Exception{
+		Scanner input = new Scanner(System.in);
+		String filename = "students.txt";
+		//Student stu[] = new Student[20];
+		readData(filename);	
+	}
+	private static Student[] readData(String filename)throws Exception{
+		File file = new File(filename); 
+		int count = 0;
+		BufferedReader br = new BufferedReader(new FileReader(file)); 
+		Scanner input = new Scanner(new File(filename));
+		//Student stu[];
+  		String st; 
+  		while ((st = br.readLine()) != null){
+  			count++;
+  		}
+  		System.out.println(count-1);
+  		
+  		// String studentname[] = new String[count+1];
+  		Student[] stu = new Student[count-1];
+  		
+  		// for(int j=0; j<=count; j++) {
+    //         stu[j] = new Student();
+    //     }
+
+
+  		// int physic[] = new int[count+1];
+  		// int chemistry[] = new chemistry[count+1];
+
+  		//Student stu[] = new Student[count];
+  		//int counter = 0;
+
+  		// while ((st = br.readLine()) != null){
+  		// 	count++;
+  		// }
+
+  		for(int i=0;i<count;i++){
+
+  			stu[i].setName(input.nextLine());
+  			stu[i].setPhysic(Integer.parseInt(input.next()));
+  			stu[i].setMath(Integer.parseInt(input.next()));
+
+
+  			// while(input.hasNext()){
+  			// 	stu[i].setName(input.nextLine());
+  			// 	stu[i].setPhysic(Integer.parseInt(input.next()));
+  			// 	stu[i].setMath(Integer.parseInt(input.next()));
+     //        	counter++;
+	    // 	}
+  		}
+  		return stu;
+  	} 
+}

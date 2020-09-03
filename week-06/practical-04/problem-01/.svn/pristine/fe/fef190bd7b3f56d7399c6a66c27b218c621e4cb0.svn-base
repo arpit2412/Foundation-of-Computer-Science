@@ -1,0 +1,15 @@
+According to Hanoi Tower. We are taking three pillars for the disk. 
+One is source which will contain all the disk.
+One is destination in which we need to put the disk as it was in in initial stage in source.
+One is auxillary or imtermediate or middle pillar which will be act as an extra pillar which is useful for maintaining the order in destination 
+
+Conditions:
+
+We can only move one disk at a time.
+We cannot place larger disk on smaller disk.
+
+Logic:
+
+
+If number of disk is zero the just return no need to do anything.
+If number of disk is one then just move the disk from source to destination.

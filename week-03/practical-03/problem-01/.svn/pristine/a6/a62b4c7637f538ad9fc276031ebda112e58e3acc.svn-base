@@ -1,0 +1,18 @@
+class reverseArray{
+
+	// Take n one more parameter as it signifies the number of input user wants 
+	int [] reverseArray(int [] array, int n){
+		System.out.println("Reverse Order");
+		for(int i=n-1;i>=0;i--){
+			System.out.println(array[i]);
+		}
+		return (array);
+	}
+	String [] reverseArray(String [] array, int n){
+		System.out.println("Rverse Order");
+		
+
+	}
+	// float [] reverseArray(float [] array)
+	
+}

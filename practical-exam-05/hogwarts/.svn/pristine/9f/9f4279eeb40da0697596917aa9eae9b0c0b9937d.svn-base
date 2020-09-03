@@ -1,0 +1,61 @@
+/*==================================
+Foundations of Computer Science
+Student: Arpit Garg
+id: A1784072
+Semester: 2
+Year: 2019    
+Practical Exam Number: 5
+===================================*/
+
+
+// Signatures:
+
+// class Queue
+// properties: back - the back of the queue is where the last element is enqueue;
+
+// methods: enqueue(Student tmpStudent), dequeue(), displayQueue()
+
+// The method displayQueue consists of traversal and print. The output format should follow:
+
+// #1 Cedric Diggory, 14 years old, 1st year in Hogwarts;
+// #2 Harry Potter, 14 years old, 2nd year in Hogwarts;
+// #3 Draco Malfoy, 14 years old, 3rd year in Hogwarts;
+
+// Requirements:
+// 1. Make methods described above;
+// 2. Make accessors and mutator for all properties;
+// 3. Make constructor
+// 4. Must compile and work properly;
+
+class Queue{
+	private Node back;
+	private Node front;
+
+	//Entering
+	public void enqueue(Student tmpStudent){
+		Node st = new Node(tmpStudent);
+		if(back==null){
+			back.setNext(st);
+			front.setNext(st);
+		}
+		back.setNext(st);
+		back = st;
+	} 
+	//Removing 
+	public void dequeue(){
+		if(front == null){
+			System.out.println("Sorry! No element presentl");
+		}else{
+			front.getNext();
+		}
+
+	}
+	//Displaying
+	public void displayQueue(){
+		int counter = 1;
+		while(front.getNext() != back){
+			System.out.println("#" + counter + " " + front.getName() + "," + front.getAge() +" years old, " +front.getPeriod() + " year in Hogwarts" );
+			counter++;
+		}
+	}
+}

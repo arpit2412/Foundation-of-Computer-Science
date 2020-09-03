@@ -1,0 +1,12 @@
+class Referee{
+	public String valid;
+	public String valid(String choice){
+		if(choice.equalsIgnoreCase("Rock") || choice.equalsIgnoreCase("Paper") || choice.equalsIgnoreCase("Scissor")){
+			valid = "valid";
+		}else{
+			valid = "no";
+			System.out.println("Error!! Not a valid input....");
+		}
+		return valid;
+	}	
+}

@@ -1,0 +1,5 @@
+abstract class VehicleAbstract{
+	String color;
+	int year;
+	int numberGears;
+}

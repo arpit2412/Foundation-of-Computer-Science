@@ -1,0 +1,20 @@
+/*
+*
+* Foundations of Computer Science
+* Semester 02 Year 2019
+* id: a1784072 name: Arpit Garg
+*
+*/
+class Doctor extends Person{
+	private String speciality;
+
+	//Mutators
+	void setSpeciality(String spec){
+		this.speciality = spec;
+	}
+
+	//Accessors
+	String getSpeciality(){
+		return this.speciality;
+	}
+}

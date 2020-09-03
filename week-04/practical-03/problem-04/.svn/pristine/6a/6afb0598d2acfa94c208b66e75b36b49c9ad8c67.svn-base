@@ -1,0 +1,10 @@
+class Bicycle extends VehicleAbstract implements Vehicle{
+	boolean is_serviced;
+	String inDate;
+	String outDate;
+	String serviceResponsible;
+
+	public void checkoutService(){
+
+	}	
+}
